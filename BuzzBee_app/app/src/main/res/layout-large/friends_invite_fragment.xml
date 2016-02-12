@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ff45c8c7">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Send Invitation Email"
+        android:id="@+id/mailListPrompt"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To:"
+        android:id="@+id/toTextView"
+        android:textSize="30sp"
+        android:layout_below="@+id/mailListPrompt"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:hint="input email address"
+        android:id="@+id/toEmailTextView"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:layout_above="@+id/subjectTextView"
+        android:layout_alignStart="@+id/subjectContentTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject:"
+        android:id="@+id/subjectTextView"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/toTextView"
+        android:textStyle="bold"
+        android:textSize="30sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:hint="input invitation subject"
+        android:id="@+id/subjectContentTextView"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:layout_above="@+id/contentTextView"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Content:"
+        android:id="@+id/contentTextView"
+        android:layout_marginTop="44dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/subjectTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/requestContentEditText"
+        android:layout_alignTop="@+id/contentTextView"
+        android:layout_alignLeft="@+id/toEmailTextView"
+        android:layout_alignStart="@+id/toEmailTextView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Invitation"
+        android:id="@+id/sendButton"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FFF9C4">
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/editText"
+        android:background="@drawable/textinput"
+        android:text="Issue an Activity"
+        android:textStyle="bold"
+        android:gravity="bottom|center_horizontal"
+        android:textSize="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fffefdff" />
+
+    <!-- event row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/eventNameLayout"
+        android:background="#FFFFFF">
+
+
+        <LinearLayout
+            android:id="@+id/event_name_prompt"
+            style="@android:style/Widget.Button"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/name_prompt" />
+
+            <TextView
+                android:id="@+id/event_name_prompt_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Event Name"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/eventNameButton"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <EditText
+                android:id="@+id/eventNameEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:hint="please input event name"
+                android:textStyle="italic"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <!-- category row-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/eventNameLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/eventCategoryLayout"
+        android:background="#FFFFFF">
+
+
+        <LinearLayout
+            android:id="@+id/category_prompt"
+            style="@android:style/Widget.Button"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/event_category" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Category"
+                android:paddingLeft="20dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/category_choose_layout"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/category_choose_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Tap to Select"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/category_choose_button"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/plus_flag" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!-- date row-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/eventCategoryLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/eventDateLayout"
+        android:background="#FFFFFF">
+
+
+        <LinearLayout
+            android:id="@+id/date_prompt"
+            style="@android:style/Widget.Button"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/date_calendar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Event Date"
+                android:paddingLeft="20dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/date_choose_layout"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/date_choose_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Tap to Select"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_choose_button"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/plus_flag" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!-- time row-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/eventDateLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/eventTimeLayout"
+        android:background="#FFFFFF">
+
+
+        <LinearLayout
+            android:id="@+id/time_prompt"
+            style="@android:style/Widget.Button"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/event_time" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Event Time"
+                android:paddingLeft="20dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/time_choose_layout"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/time_choose_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Tap to Select"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/time_choose_button"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/plus_flag" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!-- description row-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/eventTimeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/eventDescriptionLayout"
+        android:background="#FFFFFF">
+
+
+        <LinearLayout
+            android:id="@+id/imageDescriptionLayout"
+            style="@android:style/Widget.Button"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#B0BEC5"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <TextView
+                android:id="@+id/image_prompt_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Add Picture"
+                android:layout_marginRight="50dp"
+                android:paddingLeft="5dp"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="45dp"
+                android:id="@+id/eventImageView"
+                android:src="@mipmap/event_camera" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/audioDescriptionButton"
+            style="@android:style/Widget.Button"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#B0BEC5"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <TextView
+                android:id="@+id/event_description_prompt_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Add Description:"
+                android:layout_gravity="top"
+                android:textSize="20sp"
+                android:gravity="top|left" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:hint="please input description"
+                android:id="@+id/event_description_EditText"
+                android:layout_gravity="top|left"
+                android:gravity="top|left" />
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/audio_prompt_TextView"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:text="Add Audio"-->
+                <!--android:layout_marginRight="50dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:textSize="20sp"/>-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="45dp"-->
+                <!--android:id="@+id/eventAudioDescription"-->
+                <!--android:src="@mipmap/event_audio" />-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- location row-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/eventDescriptionLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/eventLocationLayout"
+        android:background="#FFFFFF">
+
+
+        <LinearLayout
+            android:id="@+id/location_prompt"
+            style="@android:style/Widget.Button"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/event_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Location"
+                android:paddingLeft="20dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/location_choose_layout"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/location_choose__TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Tap to Select"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/location_choose_button"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/plus_flag" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!-- population row-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/eventLocationLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/eventPopulationLayout"
+        android:background="#FFFFFF">
+
+
+        <LinearLayout
+            android:id="@+id/population_prompt"
+            style="@android:style/Widget.Button"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/event_population" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Population"
+                android:paddingLeft="20dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/population_choose_layout"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <EditText
+                android:id="@+id/populationEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:inputType="number"
+                android:text="1"
+                android:layout_marginRight="25dp"
+                android:textStyle="italic"
+                android:textSize="25sp"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- submit row-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventPopulationLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:id="@+id/eventSubmitLayout">
+
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:background="@drawable/create_activity_button"
+            android:id="@+id/createActivityButton"
+            android:text="Create Activity"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical|center_horizontal" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

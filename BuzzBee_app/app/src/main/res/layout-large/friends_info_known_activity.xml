@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical"
+    tools:context="com.goldenbros.buzzbee.ui.user_ui.User_Home_Fragment">
+
+
+    <RelativeLayout
+        android:id="@+id/friendInfoViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/amber">
+
+
+        <ImageView
+            android:id="@+id/friend_img"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/unknown" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/friend_img"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/known_friend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/friend_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beginner"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/friend_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:hint="There shows email"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emailLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_title_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/friend_start_chat"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/primary"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Start A Chat"/>
+
+    <TextView
+        android:id="@+id/friend_view_schedule"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/primary"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="View Schedule"/>
+
+    <TextView
+        android:id="@+id/friend_send_invitation"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/primary"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Send An Invitation"/>
+
+</LinearLayout>

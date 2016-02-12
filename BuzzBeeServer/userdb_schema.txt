@@ -1,0 +1,15 @@
+create DATABASE IF NOT EXISTS BuzzBee;
+use BuzzBee;
+
+CREATE TABLE IF NOT EXISTS users(
+    `id` int not NULL AUTO_INCREMENT PRIMARY KEY, 
+    `name` VARCHAR(255),
+    `title` VARCHAR(255),
+    `email` VARCHAR(255),
+    `passwd` VARCHAR(255),
+    `age` int,
+    `sex` VARCHAR(255),
+    `description` TEXT,
+    `photo` TEXT,
+    `audio` TEXT
+);

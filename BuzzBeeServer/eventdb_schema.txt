@@ -1,0 +1,17 @@
+create DATABASE IF NOT EXISTS BuzzBee;
+use BuzzBee;
+
+CREATE TABLE IF NOT EXISTS events(
+    `id` int AUTO_INCREMENT PRIMARY KEY, 
+    `holder_id` int,
+    `event_status` int,
+    `population` int,
+    `date` VARCHAR(255),
+    `time` VARCHAR(255),
+    `location` VARCHAR(255),
+    `name` VARCHAR(255),
+    `category` VARCHAR(255),
+    `description` TEXT,
+    `photo_filename` VARCHAR(255)
+);
+

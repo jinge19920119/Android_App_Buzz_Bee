@@ -1,0 +1,11 @@
+create DATABASE IF NOT EXISTS BuzzBee;
+use BuzzBee;
+
+
+CREATE TABLE IF NOT EXISTS schedules(
+    `id` int not NULL AUTO_INCREMENT PRIMARY KEY, 
+    `user_id` int,
+    `event_id` int,
+    `user_status` int
+);
+

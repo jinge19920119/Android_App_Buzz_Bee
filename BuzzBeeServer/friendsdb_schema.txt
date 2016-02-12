@@ -1,0 +1,8 @@
+create DATABASE IF NOT EXISTS BuzzBee;
+use BuzzBee;
+
+CREATE TABLE IF NOT EXISTS friends(
+    `id` int not NULL AUTO_INCREMENT PRIMARY KEY, 
+    `user1_id` int,
+    `user2_id` int
+);
