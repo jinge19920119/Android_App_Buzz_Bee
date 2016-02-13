@@ -14,8 +14,8 @@ public class Constants {
     // http://aws.amazon.com/articles/Mobile/4611615499399490
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    public static final String ACCESS_KEY_ID = "AKIAIM4CVXV3A3MFPD7A";
-    public static final String SECRET_KEY = "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";
+    public static final String ACCESS_KEY_ID = "key";
+    public static final String SECRET_KEY = "key";
 
     public static final String PICTURE_BUCKET = "buzzbeestorage-user";
     public static final String PICTURE_NAME = "buzzbee-trial";
